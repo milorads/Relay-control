@@ -12,7 +12,6 @@ void setup()
   while(!Console);
   digitalWrite(RELAY_PIN1, LOW);
   digitalWrite(RELAY_PIN2, LOW);
-  //Console.println("Write 1 or 2 to toggle relay on/off");
 }
 
 void loop()
@@ -31,23 +30,23 @@ void loop()
       {
         relayVal1 ^= 1;
         if (!relayVal1)
-          Console.println("Prekidac broj 1 je ukljucen!");
+          Console.println("Switch number 1 is on!");
         else
-          Console.println("Prekidac broj 1 je iskljucen.");
+          Console.println("Switch number 1 is off.");
         break;
       }
       case '2':
       {
        relayVal2 ^= 1;
         if (!relayVal2)
-          Console.println("Prekidac broj 2 je ukljucen!");
+          Console.println("Switch number 2 is on!");
         else
-          Console.println("Prekidac broj 2 je iskljucen.");
+          Console.println("Switch number 2 is off.");
         break; 
       }
     default:
       {
-        Console.println("Doslo je do greske.");
+        Console.println("There was an error.");
       }
     }
       
